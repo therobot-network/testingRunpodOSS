@@ -9,11 +9,11 @@ echo "🚀 Setting up Ollama GPT-OSS Testing Environment for RunPod 4090..."
 
 # Update system
 echo "📦 Updating system packages..."
-sudo apt update && sudo apt upgrade -y
+apt update && apt upgrade -y
 
 # Install essential packages
 echo "🛠️  Installing essential packages..."
-sudo apt install -y curl wget git python3 python3-pip htop nvtop jq
+apt install -y curl wget git python3 python3-pip htop nvtop jq
 
 # Install Ollama
 echo "🦙 Installing Ollama..."
@@ -21,8 +21,8 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 # Start Ollama service
 echo "🔄 Starting Ollama service..."
-sudo systemctl enable ollama
-sudo systemctl start ollama
+systemctl enable ollama || echo "Service enable failed, will start manually"
+systemctl start ollama || echo "Service start failed, will start manually"
 
 # Wait for Ollama to be ready
 echo "⏳ Waiting for Ollama to be ready..."
