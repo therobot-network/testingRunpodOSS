@@ -24,7 +24,8 @@ run_test() {
     local model=$1
     local prompt=$2
     local test_name=$3
-    local log_file="$LOG_DIR/${test_name}_${model//://}_$TIMESTAMP.log"
+    local model_safe=${model//:/}  # Remove colons from model name
+    local log_file="$LOG_DIR/${test_name}_${model_safe}_$TIMESTAMP.log"
     
     echo "▶️  Running test: $test_name with $model"
     echo "📝 Logging to: $log_file"
