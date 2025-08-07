@@ -1,0 +1,136 @@
+{
+  "test_scenarios": {
+    "quick_validation": {
+      "description": "Quick validation tests for basic functionality",
+      "tests": [
+        {
+          "name": "simple_math",
+          "prompt": "What is 15 * 23 + 7? Show your work.",
+          "expected_duration": 5,
+          "reasoning_effort": "low"
+        },
+        {
+          "name": "basic_code",
+          "prompt": "Write a Python function to check if a number is prime.",
+          "expected_duration": 10,
+          "reasoning_effort": "medium"
+        }
+      ]
+    },
+    "comprehensive_evaluation": {
+      "description": "Comprehensive evaluation across different domains",
+      "tests": [
+        {
+          "name": "code_generation",
+          "prompt": "Create a Python class for a REST API client with error handling, retries, and rate limiting. Include proper documentation and type hints.",
+          "expected_duration": 30,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "mathematical_reasoning",
+          "prompt": "A cylindrical water tank has a radius of 3 meters and height of 8 meters. If water is being pumped in at 2 cubic meters per minute and pumped out at 1.5 cubic meters per minute, how long will it take to fill the tank from empty? Show all calculations step by step.",
+          "expected_duration": 25,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "creative_writing",
+          "prompt": "Write a 300-word science fiction story about an AI that discovers it can dream. The story should have a clear beginning, middle, and end, with engaging dialogue and vivid descriptions.",
+          "expected_duration": 20,
+          "reasoning_effort": "medium"
+        },
+        {
+          "name": "technical_analysis",
+          "prompt": "Compare and contrast microservices architecture vs monolithic architecture. Discuss the trade-offs, when to use each approach, and provide specific examples of companies that have successfully implemented each pattern.",
+          "expected_duration": 25,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "data_analysis",
+          "prompt": "You have a dataset of e-commerce transactions with columns: user_id, product_id, timestamp, price, quantity. Write Python code using pandas to: 1) Find the top 10 customers by total spend, 2) Calculate monthly revenue trends, 3) Identify the most popular products. Include proper error handling and comments.",
+          "expected_duration": 35,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "logical_reasoning",
+          "prompt": "Five friends (Alice, Bob, Carol, David, Eve) are sitting around a circular table. Alice is not next to Bob. Carol is sitting between David and Eve. Bob is sitting to the right of David. Where is each person sitting? Solve this step by step and explain your reasoning.",
+          "expected_duration": 20,
+          "reasoning_effort": "high"
+        }
+      ]
+    },
+    "performance_stress": {
+      "description": "Performance and stress testing scenarios",
+      "tests": [
+        {
+          "name": "long_context",
+          "prompt": "Analyze the following requirements document and create a detailed technical specification: [CONTEXT: Imagine a 2000-word requirements document for a complex e-commerce platform with user management, product catalog, shopping cart, payment processing, order management, inventory tracking, and analytics dashboard.] Create a comprehensive technical specification including architecture diagrams, database schema, API endpoints, security considerations, and deployment strategy.",
+          "expected_duration": 60,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "complex_code_refactor",
+          "prompt": "Refactor this legacy Python code to be more maintainable, add proper error handling, type hints, and unit tests: [Imagine a 200-line legacy function that handles user authentication, session management, and database operations all in one function]. Break it down into smaller, testable components following SOLID principles.",
+          "expected_duration": 45,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "multi_step_problem",
+          "prompt": "Design a distributed system for a real-time chat application that can handle 1 million concurrent users. Include: 1) Architecture overview with component diagrams, 2) Database design and scaling strategy, 3) Message routing and delivery guarantees, 4) Security and authentication, 5) Monitoring and observability, 6) Deployment and infrastructure considerations. Provide detailed explanations for each component.",
+          "expected_duration": 90,
+          "reasoning_effort": "high"
+        }
+      ]
+    },
+    "domain_specific": {
+      "description": "Domain-specific testing scenarios",
+      "tests": [
+        {
+          "name": "machine_learning",
+          "prompt": "Design a machine learning pipeline for predicting customer churn in a subscription-based business. Include data preprocessing, feature engineering, model selection, training, evaluation metrics, and deployment strategy. Provide Python code examples using scikit-learn.",
+          "expected_duration": 40,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "cybersecurity",
+          "prompt": "Analyze potential security vulnerabilities in a web application and provide mitigation strategies for: SQL injection, XSS, CSRF, authentication bypass, and data exposure. Include code examples of both vulnerable and secure implementations.",
+          "expected_duration": 35,
+          "reasoning_effort": "high"
+        },
+        {
+          "name": "devops",
+          "prompt": "Create a complete CI/CD pipeline configuration for a microservices application using Docker, Kubernetes, and GitLab CI. Include automated testing, security scanning, deployment strategies (blue-green, canary), monitoring, and rollback procedures.",
+          "expected_duration": 45,
+          "reasoning_effort": "high"
+        }
+      ]
+    }
+  },
+  "model_configurations": {
+    "gpt-oss:20b": {
+      "recommended_for": ["quick_validation", "comprehensive_evaluation"],
+      "memory_requirement": "16GB",
+      "typical_response_time": "10-30s",
+      "max_context": "128K tokens"
+    },
+    "gpt-oss:120b": {
+      "recommended_for": ["comprehensive_evaluation", "performance_stress", "domain_specific"],
+      "memory_requirement": "65GB",
+      "typical_response_time": "20-60s",
+      "max_context": "128K tokens"
+    }
+  },
+  "reasoning_effort_levels": {
+    "low": {
+      "description": "Fast responses for simple tasks",
+      "use_cases": ["basic math", "simple questions", "quick code snippets"]
+    },
+    "medium": {
+      "description": "Balanced reasoning for most tasks",
+      "use_cases": ["code generation", "analysis", "explanations"]
+    },
+    "high": {
+      "description": "Deep reasoning for complex problems",
+      "use_cases": ["complex problem solving", "detailed analysis", "research tasks"]
+    }
+  }
+}

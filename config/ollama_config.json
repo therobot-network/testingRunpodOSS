@@ -1,0 +1,76 @@
+{
+  "ollama_settings": {
+    "host": "127.0.0.1",
+    "port": 11434,
+    "timeout": 300,
+    "keep_alive": "5m",
+    "num_predict": -1,
+    "num_ctx": 128000,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 40,
+    "repeat_penalty": 1.1,
+    "seed": -1
+  },
+  "gpu_settings": {
+    "gpu_layers": -1,
+    "main_gpu": 0,
+    "low_vram": false,
+    "f16_kv": true,
+    "logits_all": false,
+    "vocab_only": false,
+    "use_mmap": true,
+    "use_mlock": false,
+    "numa": false
+  },
+  "performance_monitoring": {
+    "log_gpu_usage": true,
+    "log_memory_usage": true,
+    "log_response_times": true,
+    "monitor_interval": 2,
+    "alert_thresholds": {
+      "gpu_memory_percent": 95,
+      "system_memory_percent": 90,
+      "response_time_seconds": 120,
+      "gpu_temperature_celsius": 85
+    }
+  },
+  "model_specific_settings": {
+    "gpt-oss:20b": {
+      "recommended_gpu_layers": -1,
+      "context_length": 128000,
+      "batch_size": 512,
+      "threads": 8,
+      "memory_requirement_gb": 16
+    },
+    "gpt-oss:120b": {
+      "recommended_gpu_layers": -1,
+      "context_length": 128000,
+      "batch_size": 256,
+      "threads": 12,
+      "memory_requirement_gb": 65
+    }
+  },
+  "testing_parameters": {
+    "default_reasoning_effort": "medium",
+    "max_concurrent_tests": 1,
+    "retry_failed_tests": 3,
+    "test_timeout_seconds": 300,
+    "save_full_responses": true,
+    "benchmark_iterations": 3
+  },
+  "runpod_optimizations": {
+    "description": "Optimizations specific to RunPod RTX 4090 instances",
+    "gpu_memory_fraction": 0.95,
+    "enable_mixed_precision": true,
+    "optimize_for_inference": true,
+    "preload_models": true,
+    "cache_quantized_models": true,
+    "notes": [
+      "RTX 4090 has 24GB VRAM - perfect for gpt-oss:20b",
+      "For gpt-oss:120b, consider using multiple GPUs or CPU offloading",
+      "Monitor temperature as RunPod instances can get warm under load",
+      "Use GPU monitoring to track VRAM usage and prevent OOM errors"
+    ]
+  }
+}
