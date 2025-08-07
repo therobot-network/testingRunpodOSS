@@ -1,0 +1,311 @@
+
+{
+    "timestamp": "2025-08-07T03:49:43.486487",
+    "model": "gpt-oss:20b",
+    "prompt_length": 17134,
+    "response_length": 2206,
+    "input_tokens_est": 4283,
+    "output_tokens_est": 551,
+    "total_tokens_est": 4835,
+    "total_time_seconds": 13.814,
+    "ttft_seconds": 9.08,
+    "tokens_per_second": 116.5,
+    "throughput_tokens_per_second": 350.0,
+    "gpu_before": {
+      "memory_used_mb": 487.0,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 1.982576127666504,
+      "gpu_utilization": 0,
+      "temperature": 26
+    },
+    "gpu_after": {
+      "memory_used_mb": 15646.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.69611016121153,
+      "gpu_utilization": 69,
+      "temperature": 41
+    },
+    "response": "Thinking...\nThe user asks: \"Are your cheeses certified organic, and what standards do your suppliers follow?\" We need to answer concisely based on the data.\nData references Champlain Valley Creamery Organic Cream Cheese. It mentions \"Organic Cream Cheese\" made with organic milk from Jersey cows. The content indicates \"Organic\" but does not mention certification specifics. It says \"organic cow's milk\" etc. There's mention of \"Made without stabilizers or preservatives\" but not explicit certificati...",
+    "success": true,
+    "test_number": 1,
+    "question": "Are your cheeses certified organic, and what standards do your suppliers follow?"
+  },
+  {
+    "timestamp": "2025-08-07T03:49:55.164547",
+    "model": "gpt-oss:20b",
+    "prompt_length": 16804,
+    "response_length": 2183,
+    "input_tokens_est": 4201,
+    "output_tokens_est": 545,
+    "total_tokens_est": 4746,
+    "total_time_seconds": 11.672,
+    "ttft_seconds": 5.909,
+    "tokens_per_second": 94.69,
+    "throughput_tokens_per_second": 406.67,
+    "gpu_before": {
+      "memory_used_mb": 15646.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.69611016121153,
+      "gpu_utilization": 69,
+      "temperature": 41
+    },
+    "gpu_after": {
+      "memory_used_mb": 15710.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.95665404657221,
+      "gpu_utilization": 71,
+      "temperature": 44
+    },
+    "response": "Thinking...\nWe need to answer concisely based on retrieved data. The user asks: \"Do you offer sheep\u2019s milk cheeses from specificregions, such as Tuscany or the Basque Country?\"\nWe need to parse the data: It lists cheeses from various producers and regions. There is mention of \"Basque\" as a pairing or region: \"Basque and Normandy Cider\". Also \"Murray's Cave Aged Reserve Hudson Flower Rich, Creamy, Piney\" - maybe from Basque? There's also producers: Agour, Beecher's Handmade, Il Forteto, Mitica, ...",
+    "success": true,
+    "test_number": 2,
+    "question": "Do you offer sheep\u2019s milk cheeses from specific regions, such as Tuscany or the Basque Country?"
+  },
+  {
+    "timestamp": "2025-08-07T03:50:08.563282",
+    "model": "gpt-oss:20b",
+    "prompt_length": 15466,
+    "response_length": 3270,
+    "input_tokens_est": 3866,
+    "output_tokens_est": 817,
+    "total_tokens_est": 4684,
+    "total_time_seconds": 13.39,
+    "ttft_seconds": 4.737,
+    "tokens_per_second": 94.47,
+    "throughput_tokens_per_second": 349.81,
+    "gpu_before": {
+      "memory_used_mb": 15710.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.95665404657221,
+      "gpu_utilization": 71,
+      "temperature": 44
+    },
+    "gpu_after": {
+      "memory_used_mb": 15710.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.95665404657221,
+      "gpu_utilization": 65,
+      "temperature": 45
+    },
+    "response": "Thinking...\nWe need to answer concisely: differences in production, aging, culinary uses between hard and soft cheeses. Use retrieved data. The data contains info on soft cheeses (Brie, Camembert, etc.) and hard cheeses like Parmigiano, Pecorino, etc. Also there are details like milk type, pasteurization, aging period. Use that to explain.\nWe must only use data; cannot add outside knowledge? The instruction: answer concisely based on retrieved data. We can infer from descriptions: soft cheeses h...",
+    "success": true,
+    "test_number": 3,
+    "question": "How do hard and soft cheeses differ in production, aging, and culinary uses?"
+  },
+  {
+    "timestamp": "2025-08-07T03:50:20.918008",
+    "model": "gpt-oss:20b",
+    "prompt_length": 18102,
+    "response_length": 2726,
+    "input_tokens_est": 4525,
+    "output_tokens_est": 681,
+    "total_tokens_est": 5207,
+    "total_time_seconds": 12.345,
+    "ttft_seconds": 5.445,
+    "tokens_per_second": 98.77,
+    "throughput_tokens_per_second": 421.79,
+    "gpu_before": {
+      "memory_used_mb": 15710.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.95665404657221,
+      "gpu_utilization": 65,
+      "temperature": 45
+    },
+    "gpu_after": {
+      "memory_used_mb": 15710.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.95665404657221,
+      "gpu_utilization": 74,
+      "temperature": 48
+    },
+    "response": "Thinking...\nThe user asks: \"Which imported French cheeses are AOC-certified, and what are their historical origins?\" We need to identify AOC-certified cheeses from the data. Looking at the data:\n- In first dataset, we have various French cheeses but no explicit mention of AOC.\n- Second dataset: \"Murray's 18 Month Aged Comt\u00e9\". It says \"Comt\u00e9 is an AOC-protected cheese.\" Also details about its origin: \"made for more than one thousand years in the Jura mountains, on the French-Swiss border ... prod...",
+    "success": true,
+    "test_number": 4,
+    "question": "Which imported French cheeses are AOC-certified, and what are their historical origins?"
+  },
+  {
+    "timestamp": "2025-08-07T03:50:34.718849",
+    "model": "gpt-oss:20b",
+    "prompt_length": 19435,
+    "response_length": 2886,
+    "input_tokens_est": 4858,
+    "output_tokens_est": 721,
+    "total_tokens_est": 5580,
+    "total_time_seconds": 13.792,
+    "ttft_seconds": 5.837,
+    "tokens_per_second": 90.7,
+    "throughput_tokens_per_second": 404.6,
+    "gpu_before": {
+      "memory_used_mb": 15710.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 63.95665404657221,
+      "gpu_utilization": 74,
+      "temperature": 48
+    },
+    "gpu_after": {
+      "memory_used_mb": 15742.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.08692598925256,
+      "gpu_utilization": 68,
+      "temperature": 50
+    },
+    "response": "Thinking...\nThe user asks: \"What\u2019s the spiciest cheese available, including its Scoville scale rating and origin?\" We need to find spiciest cheese in the provided data. The text includes cheese descriptions but no explicit spiciness ratings or Scoville scale values. No mention ofScoville scale. There's a cheese: \"Murray's Stilton Salty, Spicy, Fudgy / Cow Milk / Pasteurized / Age: 8 Months $28.00 / Lb\". That includes \"Spicy\". But no Scoville. There's also \"Murray's Young Manchego Nutty, Buttery...",
+    "success": true,
+    "test_number": 5,
+    "question": "What\u2019s the spiciest cheese available, including its Scoville scale rating and origin?"
+  },
+  {
+    "timestamp": "2025-08-07T03:50:47.136280",
+    "model": "gpt-oss:20b",
+    "prompt_length": 13603,
+    "response_length": 3078,
+    "input_tokens_est": 3400,
+    "output_tokens_est": 769,
+    "total_tokens_est": 4170,
+    "total_time_seconds": 12.408,
+    "ttft_seconds": 3.885,
+    "tokens_per_second": 90.28,
+    "throughput_tokens_per_second": 336.08,
+    "gpu_before": {
+      "memory_used_mb": 15742.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.08692598925256,
+      "gpu_utilization": 68,
+      "temperature": 50
+    },
+    "gpu_after": {
+      "memory_used_mb": 15742.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.08692598925256,
+      "gpu_utilization": 65,
+      "temperature": 51
+    },
+    "response": "Thinking...\nWe need to answer concisely: which cheeses are suitable for baking in puff pastry with minimal oil separation. We need to infer from data. The data includes various cheeses and descriptions. For baking in puff pastry, we want cheeses that melt well and don't separate. Likelylow-moisture cheeses like hard or semi-hard that melt nicely, like Gruy\u00e8re, fontina, mozzarella? But mozzarella can separate. Semi-soft may separate. Hard cheese like cheddar, Gouda, Parmesan, or maybe Gruy\u00e8re is...",
+    "success": true,
+    "test_number": 6,
+    "question": "Which cheeses are suitable for baking in puff pastry, with minimal oil separation?"
+  },
+  {
+    "timestamp": "2025-08-07T03:51:07.691549",
+    "model": "gpt-oss:20b",
+    "prompt_length": 35805,
+    "response_length": 4190,
+    "input_tokens_est": 8951,
+    "output_tokens_est": 1047,
+    "total_tokens_est": 9998,
+    "total_time_seconds": 20.546,
+    "ttft_seconds": 7.902,
+    "tokens_per_second": 82.85,
+    "throughput_tokens_per_second": 486.65,
+    "gpu_before": {
+      "memory_used_mb": 15742.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.08692598925256,
+      "gpu_utilization": 65,
+      "temperature": 51
+    },
+    "gpu_after": {
+      "memory_used_mb": 15902.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.73828570265428,
+      "gpu_utilization": 77,
+      "temperature": 54
+    },
+    "response": "Thinking...\nWe need to parse user query: \"Where can I purchase blue cheeses with varying intensity levels, from mild to pungent?\" They want places to purchase. We have sources: several Murray's Cheese pages. Likely answer: At Murray's Cheese, you can buy blue cheeses of varying intensity: mild Cambozola, medium Bleu d'Auvigne, strong Bayley Hazen, intense Roquefort, etc. Provide info that you can purchase at Murray's Cheese in-store or online. Provide mention of Lively Run Dairy blue cheese. So ...",
+    "success": true,
+    "test_number": 7,
+    "question": "Where can I purchase blue cheeses with varying intensity levels, from mild to pungent?"
+  },
+  {
+    "timestamp": "2025-08-07T03:51:18.618890",
+    "model": "gpt-oss:20b",
+    "prompt_length": 12633,
+    "response_length": 2959,
+    "input_tokens_est": 3158,
+    "output_tokens_est": 739,
+    "total_tokens_est": 3898,
+    "total_time_seconds": 10.919,
+    "ttft_seconds": 3.525,
+    "tokens_per_second": 100.06,
+    "throughput_tokens_per_second": 357.01,
+    "gpu_before": {
+      "memory_used_mb": 15902.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.73828570265428,
+      "gpu_utilization": 77,
+      "temperature": 54
+    },
+    "gpu_after": {
+      "memory_used_mb": 15902.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.73828570265428,
+      "gpu_utilization": 82,
+      "temperature": 55
+    },
+    "response": "Thinking...\nWe need to answer user request: \"What are the available cheese subscription boxes, including frequency, curation criteria, and annual cost?\" Provide concise answer based on data.\nFrom data: multiple subscription clubs: Cheese Explorer's Club Bold Picks (selected by Mongers), Globetrotter's Cheese Club Classics From Around the World, Cheers to Cheese Club, Mac and Cheese Club, Cheese Board Club.\nWe need frequency: likely monthly. All listed with \"/ Month\". Frequency monthly.\nCuration ...",
+    "success": true,
+    "test_number": 8,
+    "question": "What are the available cheese subscription boxes, including frequency, curation criteria, and annual cost?"
+  },
+  {
+    "timestamp": "2025-08-07T03:51:29.181357",
+    "model": "gpt-oss:20b",
+    "prompt_length": 16715,
+    "response_length": 2669,
+    "input_tokens_est": 4178,
+    "output_tokens_est": 667,
+    "total_tokens_est": 4846,
+    "total_time_seconds": 10.553,
+    "ttft_seconds": 4.222,
+    "tokens_per_second": 105.39,
+    "throughput_tokens_per_second": 459.19,
+    "gpu_before": {
+      "memory_used_mb": 15902.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.73828570265428,
+      "gpu_utilization": 82,
+      "temperature": 55
+    },
+    "gpu_after": {
+      "memory_used_mb": 15902.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.73828570265428,
+      "gpu_utilization": 72,
+      "temperature": 56
+    },
+    "response": "Thinking...\nThe user asks: \"What\u2019s the shelf life of vacuum-sealed versus freshly cut cheeses by category?\" They want shelf life of vacuum-sealed vs freshly cut cheeses by category. The data from source: we have info about cheese storage: vacuum sealed? It mentions \"wrapped tightly and unopened\" and \"freshly cut\". Let's search data: In description 2, says: \"harder cheeses can stay fresh for up to two to three weeks when wrapped tightly and unopened, fresh style cheeses are best consumed within a...",
+    "success": true,
+    "test_number": 9,
+    "question": "What\u2019s the shelf life of vacuum-sealed versus freshly cut cheeses by category?"
+  },
+  {
+    "timestamp": "2025-08-07T03:51:41.565244",
+    "model": "gpt-oss:20b",
+    "prompt_length": 17375,
+    "response_length": 2932,
+    "input_tokens_est": 4343,
+    "output_tokens_est": 733,
+    "total_tokens_est": 5076,
+    "total_time_seconds": 12.375,
+    "ttft_seconds": 4.5,
+    "tokens_per_second": 93.08,
+    "throughput_tokens_per_second": 410.24,
+    "gpu_before": {
+      "memory_used_mb": 15902.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.73828570265428,
+      "gpu_utilization": 72,
+      "temperature": 56
+    },
+    "gpu_after": {
+      "memory_used_mb": 15902.3125,
+      "memory_total_mb": 24564.0,
+      "memory_percent": 64.73828570265428,
+      "gpu_utilization": 64,
+      "temperature": 57
+    },
+    "response": "Thinking...\nWe need to answer: \"Which cheeses are mild and kid-friendly, with low salt content and soft textures?\" We have data frompages about soft cheeses like Brie, Camembert, etc. Also fresh cheeses like mozzarella, burrata, ricotta, etc. The question: \"Which cheeses are mild and kid-friendly, with low salt content and soft textures?\" So we need to list cheeses that match: mild, kid-friendly, low salt, soft textures. From data:\n- Soft cheeses: Brie, Camembert, Fromager d\u2019Affinois, triple cr...",
+    "success": true,
+    "test_number": 10,
+    "question": "Which cheeses are mild and kid-friendly, with low salt content and soft textures?"
+  }

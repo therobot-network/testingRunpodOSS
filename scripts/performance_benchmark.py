@@ -162,7 +162,7 @@ class PerformanceBenchmark:
                 'throughput_tokens_per_second': round(total_tokens / total_time, 2) if total_time > 0 else 0,
                 'gpu_before': gpu_before,
                 'gpu_after': gpu_after,
-                'response': full_response[:500] + "..." if len(full_response) > 500 else full_response,
+                'response': full_response,
                 'success': True
             }
             
@@ -252,8 +252,25 @@ class PerformanceBenchmark:
         
         # Save detailed JSON results
         json_file = f"{self.log_dir}/performance_benchmark_{timestamp}.json"
-        with open(json_file, 'w') as f:
-            json.dump(self.results, f, indent=2)
+        with open(json_file, 'w', encoding='utf-8') as f:
+            json.dump(self.results, f, indent=2, ensure_ascii=False)
+        
+        # Save full responses separately for easier reading
+        responses_file = f"{self.log_dir}/full_responses_{timestamp}.txt"
+        with open(responses_file, 'w', encoding='utf-8') as f:
+            f.write(f"GPT-OSS Performance Test Responses - {timestamp}\n")
+            f.write("=" * 60 + "\n\n")
+            
+            for i, result in enumerate(self.results, 1):
+                if result['success']:
+                    f.write(f"TEST {i}: {result.get('question', 'No question')}\n")
+                    f.write("-" * 40 + "\n")
+                    f.write(f"Model: {result['model']}\n")
+                    f.write(f"Time: {result['total_time_seconds']}s | TTFT: {result['ttft_seconds']}s | Tokens/sec: {result['tokens_per_second']}\n")
+                    f.write(f"Input tokens: {result['input_tokens_est']} | Output tokens: {result['output_tokens_est']}\n")
+                    f.write("\nFULL RESPONSE:\n")
+                    f.write(result['response'])
+                    f.write("\n\n" + "=" * 60 + "\n\n")
         
         # Save CSV summary
         csv_file = f"{self.log_dir}/performance_summary_{timestamp}.csv"
@@ -282,6 +299,7 @@ class PerformanceBenchmark:
         console.print(f"[green]Results saved to:[/green]")
         console.print(f"  📄 {json_file}")
         console.print(f"  📊 {csv_file}")
+        console.print(f"  📝 {responses_file}")
     
     def display_summary(self):
         """Display benchmark results summary"""
